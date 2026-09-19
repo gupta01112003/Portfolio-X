@@ -22,10 +22,8 @@ export default function Hero() {
           <h1 className="hero-title">
             <span className="hero-title-small">Hi, I&apos;m</span>
 
-            <span className="hero-name">
-              Aashish
-              <br />
-              <span>Gupta.</span>
+            <span className="gradient-text hero-name">
+              Aashish Gupta.
             </span>
           </h1>
 

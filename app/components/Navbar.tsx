@@ -2,57 +2,39 @@
 
 import { useState } from "react";
 
-const navItems = [
-  { name: "Home", id: "home" },
-  { name: "About", id: "about" },
-  { name: "Work", id: "work" },
-  { name: "Experience", id: "experience" },
-  { name: "Contact", id: "contact" },
-];
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-
-    setMenuOpen(false);
-  };
+  const links = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Work", href: "#work" },
+    { name: "Experience", href: "#experience" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
     <header className="navbar">
       <div className="navbar-inner">
 
-        {/* Logo */}
-        <button
-          className="navbar-logo"
-          onClick={() => scrollToSection("home")}
-        >
+        <a href="#home" className="logo">
           AG<span>.</span>
-        </button>
+        </a>
 
-        {/* Desktop Navigation */}
-        <nav className="desktop-nav">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
             >
-              {item.name}
-            </button>
+              {link.name}
+            </a>
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
-          className="menu-button"
+          className={`menu-button ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation menu"
         >
@@ -61,20 +43,6 @@ export default function Navbar() {
         </button>
 
       </div>
-
-      {/* Mobile Navigation */}
-      {menuOpen && (
-        <nav className="mobile-nav">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-            >
-              {item.name}
-            </button>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }

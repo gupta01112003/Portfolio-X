@@ -14,10 +14,8 @@ export default function Contact() {
       </p>
 
       <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=ag9867603762@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="primary-button"
+        href="mailto:https://mail.google.com/mail/?view=cm&fs=1&to=ag9867603762@gmail.com"
+        className="portfolio-button"
       >
         Get in Touch
       </a>

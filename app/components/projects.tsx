@@ -32,9 +32,9 @@ export default function Projects() {
 
       <h2>Projects I&apos;m proud of.</h2>
 
-      <div className="project-card glass-card">
+      <div className="project-card interactive-card">
         {projects.map((project) => (
-          <article className="project-card glass-card" key={project.number}>
+          <article className="project-card interactive-card" key={project.number}>
             <span>{project.number}</span>
 
             <h3>{project.title}</h3>

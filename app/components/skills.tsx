@@ -5,7 +5,13 @@ const skillGroups = [
   },
   {
     title: "Web & Backend",
-    skills: ["React.js", "Node.js", "Express.js", "Spring Boot", "REST APIs"],
+    skills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "REST APIs",
+    ],
   },
   {
     title: "Databases",
@@ -13,7 +19,13 @@ const skillGroups = [
   },
   {
     title: "AI & Data",
-    skills: ["TensorFlow", "Keras", "Pandas", "NumPy", "Scikit-learn"],
+    skills: [
+      "TensorFlow",
+      "Keras",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+    ],
   },
   {
     title: "Tools",
@@ -24,21 +36,29 @@ const skillGroups = [
 export default function Skills() {
   return (
     <section
-  id="skills"
-  className="skills-section reveal"
->
+      id="skills"
+      className="skills-section reveal"
+    >
       <p className="section-label">03 — SKILLS</p>
 
       <h2>Tools I use to build.</h2>
 
       <div className="skills-grid">
         {skillGroups.map((group) => (
-          <div className="skill-group" key={group.title}>
+          <div
+            className="skill-group interactive-card"
+            key={group.title}
+          >
             <h3>{group.title}</h3>
 
             <div className="skill-list">
               {group.skills.map((skill) => (
-                <span key={skill}>{skill}</span>
+                <span
+                  className="interactive-card"
+                  key={skill}
+                >
+                  {skill}
+                </span>
               ))}
             </div>
           </div>

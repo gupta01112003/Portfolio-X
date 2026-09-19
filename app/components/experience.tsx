@@ -8,7 +8,7 @@ export default function Experience() {
 
       <h2>Where I&apos;ve been learning.</h2>
 
-      <div className="experience-card">
+      <div className="experience-card interactive-card">
         <div>
           <p className="experience-date">2026</p>
         </div>

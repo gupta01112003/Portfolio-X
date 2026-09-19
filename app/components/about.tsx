@@ -9,6 +9,7 @@ export default function About() {
       <h2>Engineer. Builder. Problem Solver.</h2>
 
       <p className="about-text">
+        
         I&apos;m an Electronics &amp; Computer Science engineering student
         interested in software development, artificial intelligence, web
         technologies, and building practical solutions.
