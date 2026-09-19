@@ -12,6 +12,9 @@ export const projects = [
       "GHG Protocol",
     ],
     year: "2026",
+    featured: true,
+    github: "https://github.com/",
+    demo: "#",
   },
 
   {
@@ -27,6 +30,9 @@ export const projects = [
       "NumPy",
     ],
     year: "2026",
+    featured: false,
+    github: "https://github.com/",
+    demo: "#",
   },
 
   {
@@ -42,5 +48,8 @@ export const projects = [
       "GitHub",
     ],
     year: "2026",
+    featured: false,
+    github: "https://github.com/gupta01112003/Portfolio-X",
+    demo: "#",
   },
 ];
