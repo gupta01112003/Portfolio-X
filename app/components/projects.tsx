@@ -1,47 +1,57 @@
-const projects = [
-  {
-    number: "01",
-    title: "Breast Cancer Detection",
-    description:
-      "A deep learning system using CNNs for classifying tumors as benign or malignant.",
-    technologies: "Python · TensorFlow · Keras · CNN",
-  },
-  {
-    number: "02",
-    title: "Expense Management System",
-    description:
-      "A web application for tracking, categorizing, and analyzing personal expenses.",
-    technologies: "React · Node.js · Spring Boot · MySQL",
-  },
-  {
-    number: "03",
-    title: "E-Commerce Website",
-    description:
-      "A responsive marketplace with product search, filtering, and order tracking.",
-    technologies: "React · Node.js · Python · MongoDB",
-  },
-];
+import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section
-  id="work"
-  className="projects-section reveal"
->
+    <section id="work" className="projects-section reveal">
       <p className="section-label">02 — WORK</p>
 
-      <h2>Projects I&apos;m proud of.</h2>
+      <div className="projects-heading">
+        <h2>Things I&apos;ve built.</h2>
 
-      <div className="project-card interactive-card">
-        {projects.map((project) => (
-          <article className="project-card interactive-card" key={project.number}>
-            <span>{project.number}</span>
+        <p>
+          A selection of projects where I explore software, AI, web
+          technologies, and real-world problem solving.
+        </p>
+      </div>
 
-            <h3>{project.title}</h3>
+      <div className="projects-list">
+        {projects.map((project, index) => (
+          <article className="project-card" key={project.title}>
+            <div className="project-number">
+              0{index + 1}
+            </div>
 
-            <p>{project.description}</p>
+            <div className="project-main">
+              <div className="project-top">
+                <div>
+                  <p className="project-category">
+                    {project.category}
+                  </p>
 
-            <p className="tech-stack">{project.technologies}</p>
+                  <h3>{project.title}</h3>
+                </div>
+
+                <span className="project-year">
+                  {project.year}
+                </span>
+              </div>
+
+              <p className="project-description">
+                {project.description}
+              </p>
+
+              <div className="project-tech">
+                {project.technologies.map((technology) => (
+                  <span key={technology}>
+                    {technology}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="project-arrow">
+              ↗
+            </div>
           </article>
         ))}
       </div>

@@ -2153,3 +2153,233 @@ section {
   width: 100%;
   max-width: 100%;
 }
+/* =========================================
+   STEP 8 — PROJECTS / WORK
+========================================= */
+
+.projects-section {
+  padding: 140px 0;
+}
+
+.projects-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+
+  margin: 30px 0 70px;
+}
+
+.projects-heading h2 {
+  margin: 0;
+
+  font-size: clamp(48px, 7vw, 90px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 500;
+}
+
+.projects-heading p {
+  max-width: 420px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.projects-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 80px 1fr 60px;
+
+  gap: 30px;
+
+  padding: 45px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease;
+}
+
+.project-card:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.project-number {
+  padding-top: 6px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.project-main {
+  min-width: 0;
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+}
+
+.project-category {
+  margin: 0 0 12px;
+
+  color: #8b82ff;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 0;
+
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+}
+
+.project-year {
+  flex-shrink: 0;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 14px;
+}
+
+.project-description {
+  max-width: 720px;
+
+  margin: 28px 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-tech span {
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+}
+
+.project-arrow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 30px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+  transform: translate(5px, -5px);
+  color: #ffffff;
+}
+
+
+/* =========================================
+   PROJECTS — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .projects-section {
+    padding: 90px 24px;
+  }
+
+  .projects-heading {
+    display: block;
+
+    margin: 24px 0 50px;
+  }
+
+  .projects-heading h2 {
+    font-size: clamp(42px, 12vw, 62px);
+    letter-spacing: -2px;
+
+    margin-bottom: 28px;
+  }
+
+  .projects-heading p {
+    font-size: 17px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr 35px;
+
+    gap: 10px;
+
+    padding: 35px 0;
+  }
+
+  .project-number {
+    display: none;
+  }
+
+  .project-top {
+    display: block;
+  }
+
+  .project-card h3 {
+    font-size: 32px;
+  }
+
+  .project-year {
+    display: block;
+
+    margin-top: 12px;
+  }
+
+  .project-description {
+    font-size: 17px;
+    margin: 22px 0;
+  }
+
+  .project-tech {
+    gap: 8px;
+  }
+
+  .project-tech span {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .project-arrow {
+    font-size: 24px;
+  }
+
+}
