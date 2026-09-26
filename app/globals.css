@@ -3113,3 +3113,156 @@ section {
     margin-bottom: 35px;
   }
 }
+/* =========================================
+   STEP 12 — CONTACT
+========================================= */
+
+.contact-section {
+  padding: 160px 0 100px;
+}
+
+.contact-main {
+  max-width: 1000px;
+  margin-top: 45px;
+}
+
+.contact-label {
+  margin: 0 0 25px;
+  color: #8b82ff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-main h2 {
+  margin: 0;
+  font-size: clamp(58px, 9vw, 120px);
+  line-height: 0.9;
+  letter-spacing: -6px;
+  font-weight: 500;
+}
+
+.contact-description {
+  max-width: 620px;
+  margin: 45px 0 35px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+}
+
+.contact-button.primary {
+  background: #ffffff;
+  color: #080808;
+}
+
+.contact-button.primary:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.contact-button.secondary {
+  background: transparent;
+  color: #ffffff;
+}
+
+.contact-button.secondary:hover {
+  background: #ffffff;
+  color: #080808;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 140px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    padding 0.3s ease;
+}
+
+.contact-links a:not(:last-child) {
+  margin-right: 35px;
+}
+
+.contact-links a:hover {
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+.contact-links a span {
+  color: rgba(255, 255, 255, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.contact-links a:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .contact-section {
+    padding: 100px 24px 70px;
+  }
+
+  .contact-main {
+    margin-top: 30px;
+  }
+
+  .contact-main h2 {
+    font-size: clamp(52px, 15vw, 80px);
+    letter-spacing: -4px;
+  }
+
+  .contact-description {
+    margin: 35px 0 30px;
+    font-size: 17px;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+    margin-top: 90px;
+  }
+
+  .contact-links a:not(:last-child) {
+    margin-right: 0;
+  }
+}
